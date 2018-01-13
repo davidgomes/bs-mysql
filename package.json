@@ -1,6 +1,7 @@
 {
   "name": "bs-mysql",
-  "version": "0.1.0",
+  "description": "Bucklescript bindings for mysql.js, written in Reason.",
+  "version": "0.1.2",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
@@ -8,14 +9,25 @@
     "clean": "bsb -clean-world"
   },
   "keywords": [
-    "BuckleScript"
+    "BuckleScript",
+    "reason",
+    "reasonml",
+    "mysql",
+    "databases"
   ],
-  "author": "",
+  "author": "David Gomes <davidrafagomes@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "bs-platform": "^2.1.0"
+  "bugs": "https://github.com/davidgomes/bs-mysql/issues",
+  "homepage": "https://github.com/davidgomes/bs-mysql",
+  "peerDependencies": {
+    "mysql": "^2.15.0"
   },
-  "dependencies": {
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidgomes/bs-mysql"
+  },
+  "devDependencies": {
+    "bs-platform": "^2.1.0",
     "mysql": "^2.15.0"
   }
 }
