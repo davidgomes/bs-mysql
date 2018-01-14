@@ -13,7 +13,8 @@
     "reason",
     "reasonml",
     "mysql",
-    "databases"
+    "databases",
+    "node"
   ],
   "author": "David Gomes <davidrafagomes@gmail.com>",
   "license": "MIT",
