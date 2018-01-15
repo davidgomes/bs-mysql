@@ -21,7 +21,7 @@ external createConnection : configObj => connection = "";
 let createConnection =
     (~host=?, ~port=?, ~user=?, ~password=?, ~database=?, ()) =>
   createConnection(
-    makeConfigObj(~host=?host, ~port=?port, ~user=?user, ~password=?password, ~database=?database, ())
+    makeConfigObj(~host?, ~port?, ~user?, ~password?, ~database?, ())
   );
 
 type error =
