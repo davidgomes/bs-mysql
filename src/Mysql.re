@@ -18,8 +18,11 @@ external makeConfigObj :
 [@bs.module "mysql"] [@bs.val]
 external createConnection : configObj => connection = "";
 
-let createConnection = (~host, ~port, ~user) =>
-  createConnection(makeConfigObj(~host, ~port, ~user, ()));
+let createConnection =
+    (~host=?, ~port=?, ~user=?, ~password=?, ~database=?, ()) =>
+  createConnection(
+    makeConfigObj(~host=?host, ~port=?port, ~user=?user, ~password=?password, ~database=?database, ())
+  );
 
 type error =
   Js.Nullable.t(
