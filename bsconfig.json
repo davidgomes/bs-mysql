@@ -8,6 +8,10 @@
       "type": "dev"
     }
   ],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
   "suffix": ".bs.js",
   "refmt": 3
 }
