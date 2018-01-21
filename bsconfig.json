@@ -13,6 +13,5 @@
     "in-source": true
   },
   "suffix": ".bs.js",
-  "namespace": true,
   "refmt": 3
 }
