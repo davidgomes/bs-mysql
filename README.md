@@ -5,18 +5,15 @@ This repository contains in-progress Reason/Bucklescript bindings for [mysql](ht
 ## Example
 
 ```ocaml
-let conn = Mysql.connect(~host="127.0.0.1", ~port=3306, ~user="root");
+let conn = Mysql.createConnection(~host="127.0.0.1", ~port=3306, ~user="root", ());
 
-Mysql.query(
-  conn,
-  "SHOW DATABASES",
-  (error, results, fields) =>
-    switch (Js.Nullable.to_opt(error)) {
-    | None =>
-      Js.log(results);
-      Js.log(fields)
-    | Some(error) => Js.log(error##message)
-    }
+Mysql.query(conn, "SHOW DATABASES", (error, results, fields) =>
+  switch (Js.Nullable.to_opt(error)) {
+  | None =>
+    Js.log(results);
+    Js.log(fields);
+  | Some(error) => Js.log(error##message)
+  }
 );
 
 Mysql.endConnection(conn);
@@ -29,18 +26,18 @@ Mysql.endConnection(conn);
 
 ```json
 {
-  "bs-dependencies": [
-      "bs-mysql"
-  ]
+  "bs-dependencies": ["bs-mysql"]
 }
 ```
 
 ## Build
+
 ```
 npm run build
 ```
 
 ## Build + Watch
+
 ```
 npm run start
 ```
