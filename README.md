@@ -24,18 +24,18 @@ Mysql.endConnection(conn);
 
 ```json
 {
-  "bs-dependencies": [
-      "bs-mysql"
-  ]
+  "bs-dependencies": ["bs-mysql"]
 }
 ```
 
 ## Build
+
 ```
 npm run build
 ```
 
 ## Build + Watch
+
 ```
 npm run start
 ```
